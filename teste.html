@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SALDANHA | Links Oficiais do Canal!</title>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="links.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-x6DhfES2lP6Oxp7UoXnXfB11YYbpGY25DOKPXZC3yIMe3qwizVc3oBYPBdu5emmw" crossorigin="anonymous">
+  <link rel="icon" href="saldanha.ico" type="image/x-icon">
+  <link rel="icon" href="saldanha.png" type="image/png">
+
+</head>
+<body>
+  <audio id="myAudio" autoplay loop>
+    <source src="onreat.mp3" type="audio/mp3"> 
+    <source src="onreat.mp3" type="audio/mpeg">
+    <source src="onreat.mp3" type="audio/ogg">
+  </audio>
+
+  <button onclick="toggleAudio()">
+    <ion-icon id="muteIcon" name="volume-mute-outline"></ion-icon>
+  </button>
+
+  <script>
+      var audio = document.getElementById("myAudio");
+      var muteIcon = document.getElementById("muteIcon");
+      function toggleAudio() {
+        if (audio.paused) {
+          audio.play();
+          muteIcon.name = "volume-high";
+        } else {
+          audio.pause();
+          muteIcon.name = "volume-mute";
+        }
+      }
+  </script>
+      <div class="fundo">
+          <video src="video.mp4" autoplay loop muted></video>
+        </div>
+      <div class="navbar">
+        <a href="https://www.instagram.com/_evertonsaldanha/" target="_blank">
+          <div class="box">
+            <div class="icone Instagram" data-social-media="Instagram">
+                <ion-icon name="logo-instagram"></ion-icon>
+            </div>
+            <p>Instagram</p>
+          </div>
+        </a>
+        <a href="https://www.youtube.com/channel/UCU29WkUhjEkm5x-0QV2NO8Q" target="_blank">
+          <div class="box">
+            <div class="icone Youtube" data-social-media="Youtube">
+                <ion-icon name="logo-youtube"></ion-icon>
+            </div>
+            <p>Youtube</p>
+          </div>
+        </a>
+        <a href="https://twitter.com/SaldanhaXz" target="_blank">
+          <div class="box">
+            <div class="icone Twitter" data-social-media="Twitter">
+                <ion-icon name="logo-twitter"></ion-icon>
+            </div>
+            <p>Twitter</p>
+          </div>
+        </a>
+        <a href="https://discord.com/invite/2mAPVStXAP" target="_blank">
+          <div class="box">
+            <div class="icone Discord" data-social-media="Discord">
+                <ion-icon name="logo-discord"></ion-icon>
+            </div>
+            <p>Discord</p>
+          </div>
+        </a>
+        <a href="https://www.twitch.tv/saldanhaxz2" target="_blank">
+          <div class="box">
+            <div class="icone Twitch" data-social-media="Twitch">
+                <ion-icon name="logo-twitch"></ion-icon>
+            </div>
+            <p>Twitch</p>
+          </div>
+        </a>
+        <a href="https://www.twitch.tv/products/saldanhaxz2" target="_blank">
+          <div class="box">
+            <div class="icone sub" data-social-media="Instagram">
+                <ion-icon name="star-sharp"></ion-icon>
+            </div>
+            <p>Sub</p>
+          </div>
+        </a>
+        <a href="https://livepix.gg/saldanhaxz2" target="_blank">
+          <div class="box">
+            <div class="icone doe" data-social-media="Instagram">
+              <ion-icon name="card-sharp"></ion-icon>
+            </div>
+            <p>Donate</p>
+          </div>
+        </a>
+        </div>
+    </div>
+    </div>
+
+  <main class="content">
+    <texto> 
+      <h2 class="heartbeat-text">Recado</h2>
+          <p class="heartbeat-text">Olá, este site é da stream do Saldanha (<a href="https://www.twitch.tv/saldanhaxz2">https://www.twitch.tv/saldanhaxz2</a>), como meio de melhor acesso aos links de Divulgação!</p> 
+      <h2 class="heartbeat-text">Sobre mim</h2>
+          <p class="heartbeat-text">Olá, meu nome é Saldanha e faço lives por Hob, atualmente moro no Amazonas-Manaus. <br>Jogo de tudo, Valorant, CS:GO, League of Legends, Dark Souls etc. Adoro fazer lives e espero que goste do meu conteudo! Tamo junto!</p><br>
+    </texto>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    // Função para gerar uma cor aleatória
+    function getRandomColor() {
+      const letters = '0123456789ABCDEF';
+      let color = '#';
+      for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+
+    // Adicione um manipulador de eventos para cada elemento .box
+    const boxes = document.querySelectorAll('.box');
+    boxes.forEach(box => {
+      box.addEventListener('mouseover', () => {
+        const randomColor = getRandomColor();
+        box.style.backgroundColor = randomColor;
+      });
+      box.addEventListener('mouseout', () => {
+        // Restaura a cor original quando o mouse sai do elemento
+        box.style.backgroundColor = '';
+      });
+    });
+  </script>
+</body>
+</html>
